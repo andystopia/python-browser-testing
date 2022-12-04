@@ -9,7 +9,6 @@
     <!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
   <body>
@@ -21,13 +20,11 @@
     now.strftime("%m/%d/%Y, %H:%M:%S")
     </py-script>
 
-    <div id="editor">
-        def hello():
-            print("hello world")
-    }</div>
+    <div id="editor"></div>
         
 
     <button id="run">Run</button>
+    <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <script>
         var editor = ace.edit("editor");
         editor.setTheme("ace/theme/monokai");
