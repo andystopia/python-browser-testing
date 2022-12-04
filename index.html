@@ -9,6 +9,7 @@
     <!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
   <body>
@@ -19,5 +20,22 @@
     now = datetime.now()
     now.strftime("%m/%d/%Y, %H:%M:%S")
     </py-script>
+
+    <div id="editor">
+        def hello():
+            print("hello world")
+    }</div>
+        
+
+    <button id="run">Run</button>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+        document.getElementById("run").onclick = (e) => { 
+            const pythonCode = editor.getValue()
+            console.log(pythonCode)
+        }
+    </script>
   </body>
 </html>
